@@ -10,7 +10,12 @@ const fs = require("fs"); //fs = filesystem
 //2. Erase mod = Erase old data write
 
 const contacts = `
-XXX
+Ali,
+Anar,
+Bro,
+Ata,
+Ana,
+Vuqar
 `;
 //if file does not exits, this method creates file.
 //writeFile override old data.
@@ -21,17 +26,35 @@ fs.writeFile("./contacts.txt", contacts, function (err) {
     console.log("failed:, ", err);
     return;
   }
-  console.log("file writed successfully.");
+  console.log("Async contacts writed successfully.");
 }); //Async function
 
 console.log("===");
 console.log("Sync file writing");
 console.log("===");
 
-try {
-  fs.writeFileSync("./contacts.txt", 12321); //Sync function
-} catch (e) {
-    console.log(e)
-}
+fs.writeFileSync("./contacts.txt", contacts); //Sync function
 
-console.log("Program execited");
+console.log("Sync contacts writed successfully.");
+
+//readFile use for read data from file
+
+fs.readFile("./contacts.txt", "utf8", function(err, data){
+    if(err){
+        console.log("File cannot read: ", err)
+        process.exit()
+    }
+    console.log("===")
+    console.log("Contacts: ")
+    console.log(data)
+
+
+});
+
+//Reading with Sync
+
+const data = fs.readFileSync("./contacts.txt", "utf8");//return error or data.
+
+console.log("data" ,data)
+
+

@@ -1,2 +1,7 @@
 
-XXX
+Ali,
+Anar,
+Bro,
+Ata,
+Ana,
+Vuqar
