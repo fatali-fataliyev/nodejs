@@ -55,6 +55,6 @@ fs.readFile("./contacts.txt", "utf8", function(err, data){
 
 const data = fs.readFileSync("./contacts.txt", "utf8");//return error or data.
 
-console.log("data" ,data)
+console.log("data" ,data);
 
 

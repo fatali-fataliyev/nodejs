@@ -1,7 +1,1 @@
-
-Ali,
-Anar,
-Bro,
-Ata,
-Ana,
-Vuqar
+Ali,Anar,Bro,Ata,Ana,Vuqar,Bob,John,Alexander
