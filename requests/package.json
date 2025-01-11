@@ -1,0 +1,20 @@
+{
+  "name": "requests",
+  "version": "1.1.0",
+  "description": "\"http requester\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "http-request",
+    "request"
+  ],
+  "author": "Fatali",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "inquirer": "^12.3.0",
+    "requests": "^0.3.0"
+  }
+} 
