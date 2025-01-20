@@ -28,16 +28,7 @@ async function newSearch(userName, userLocation) {
   }/${date.getDate()}/${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
 
   if (temperature != undefined && userName != undefined) {
-    search = `
-      ===
-      user name: ${userName}
-      --
-      user location: ${userLocation}
-      --
-      temperature: ${temperature}°C
-      --
-      request date: ${reqDate}
-      `;
+    search = `{"username": "${userName}", "userLocation": "${userLocation}", "temperature": "${temperature}°C", "requestDate": "${reqDate}"}=\n`;
   }
 
   fs.appendFileSync("./log.txt", search);
