@@ -74,7 +74,7 @@ function getRules() {
   return `
         Ikiye Bolunme: Ededin ikiye bolunmesinden alinan qaliq sifira beraberdirse eded ikiye bolunur.
         ---------------------------------------------------------------
-        Uche Bolunme: Ededlerin cemi uche bolunurse eded uche bolunur => 333 (3+3+3 = 9 | 9/3 = 3)
+        Uche Bolunme: Reqemlerin cemi uche bolunurse eded uche bolunur => 333 (3+3+3 = 9 | 9/3 = 3)
         ---------------------------------------------------------------
         Dorde Bolunme: Ededin son 2 reqemi dorde bolunurse bu ededde dorde bolunur. => (480 [80] | 80/4 = 20)
         ---------------------------------------------------------------
@@ -82,14 +82,13 @@ function getRules() {
         ---------------------------------------------------------------
         Altiya Bolunme: Eded hem ikiye hemde uche bolunurse bu eded altiya bolunur.
         ---------------------------------------------------------------
-        Yeddiye Bolunme: Ededin sondan uch reqemi ile qalan hissesi ile chixiriq, alinan ferq yeddiye bolunurse bu eded yeddiye bolunur
-
-        Meselen: 876743 => (876 - 743 = 134 | 134/7 = )
+        Yeddiye Bolunme: Ededin sondan uch reqemi ile qalan hissesi ile chixiriq, alinan ferq yeddiye bolunurse bu eded yeddiye bolunur.
         ---------------------------------------------------------------
-        9. reqem 9 => verilen reqemin 9-a bolunub bolunmediyin deyir.
+        Sekkize Bolunme: Ededin son uch reqemi sekkize bolunurse bu eded sekkize bolunur.
         ---------------------------------------------------------------
-        10. reqem 10 => verilen reqemin 10-a bolunub bolunmediyin deyir.
+        Doqquza Bolunme: Reqemlerin cemi doqquza bolunurse bu ededde doqquza bolunur.
         ---------------------------------------------------------------
+        Ona Bolunme: Ededin son reqemi sifirdirsa bu eded ona bolunur.
     `;
 }
 
