@@ -41,6 +41,7 @@ function getHelp() {
   return `
         Emrler:
         1. komek, bu mesaji ekrana chap edir.
+        2. qayda, qaydalari ekrana chap edir.
         ---------------------------------------------------------------
         ---------------------------ESAS EMRLER-------------------------
         ---------------------------------------------------------------
@@ -65,27 +66,50 @@ function getHelp() {
     `;
 }
 
+function getRules() {
+  return `
+        Ikiye Bolunme: Ededin ikiye bolunmesinden alinan qaliq sifira beraberdirse eded ikiye bolunur.
+        ---------------------------------------------------------------
+        Uche Bolunme: 
+        ---------------------------------------------------------------
+        5. reqem 5 => verilen reqemin 5-e bolunub bolunmediyin deyir.
+        ---------------------------------------------------------------
+        6. reqem 6 => verilen reqemin 6-a bolunub bolunmediyin deyir.
+        ---------------------------------------------------------------
+        7. reqem 7 => verilen reqemin 7-e bolunub bolunmediyin deyir.
+        ---------------------------------------------------------------
+        8. reqem 8 => verilen reqemin 3-e bolunub bolunmediyin deyir.
+        ---------------------------------------------------------------
+        9. reqem 9 => verilen reqemin 9-a bolunub bolunmediyin deyir.
+        ---------------------------------------------------------------
+        10. reqem 10 => verilen reqemin 10-a bolunub bolunmediyin deyir.
+        ---------------------------------------------------------------
+    `;
+}
+
 function start() {
   if (process.argv[2] == "komek") {
     console.log(getHelp());
+  } else if (process.argv[2] == "qayda") {
+    console.log(getRules());
+  } else {
+    let [numErr, numErrMsg] = checkNum(parseInt(process.argv[2]));
+    if (numErr != null) {
+      console.log(numErrMsg);
+      process.exit();
+    }
+
+    let inputNumber = process.argv[2];
+    let { err, errMsg } = execCmd(process.argv[3]);
+
+    if (err != null) {
+      console.log(errMsg);
+      process.exit();
+    }
+    let { result } = execCmd(process.argv[3]);
+
+    console.log(result(inputNumber));
   }
-
-  let [numErr, numErrMsg] = checkNum(parseInt(process.argv[2]));
-  if (numErr != null) {
-    console.log(numErrMsg);
-    process.exit();
-  }
-
-  let inputNumber = process.argv[2];
-  let { err, errMsg } = execCmd(process.argv[3]);
-
-  if (err != null) {
-    console.log(errMsg);
-    process.exit();
-  }
-  let { result } = execCmd(process.argv[3]);
-
-  console.log(result(inputNumber));
 }
 start();
 
