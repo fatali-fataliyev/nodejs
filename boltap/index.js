@@ -70,15 +70,17 @@ function getRules() {
   return `
         Ikiye Bolunme: Ededin ikiye bolunmesinden alinan qaliq sifira beraberdirse eded ikiye bolunur.
         ---------------------------------------------------------------
-        Uche Bolunme: Ededlerin cemi uche bolunurse eded uche bolunur => 333 (3+3+3 = 9 / 9/3 = 3)
+        Uche Bolunme: Ededlerin cemi uche bolunurse eded uche bolunur => 333 (3+3+3 = 9 | 9/3 = 3)
         ---------------------------------------------------------------
-        
+        Dorde Bolunme: Ededin son 2 reqemi dorde bolunurse bu ededde dorde bolunur. => (480 [80] | 80/4 = 20)
         ---------------------------------------------------------------
-        6. reqem 6 => verilen reqemin 6-a bolunub bolunmediyin deyir.
+        Beshe Bolunme: Ededin son reqemi "0" veya "5"-dirse bu eded 5e bolunur.
         ---------------------------------------------------------------
-        7. reqem 7 => verilen reqemin 7-e bolunub bolunmediyin deyir.
+        Altiya Bolunme: Eded hem ikiye hemde uche bolunurse bu eded altiya bolunur.
         ---------------------------------------------------------------
-        8. reqem 8 => verilen reqemin 3-e bolunub bolunmediyin deyir.
+        Yeddiye Bolunme: Ededin sondan uch reqemi ile qalan hissesi ile chixiriq, alinan ferq yeddiye bolunurse bu eded yeddiye bolunur
+
+        Meselen: 876743 => (876 - 743 = 134 | 134/7 = )
         ---------------------------------------------------------------
         9. reqem 9 => verilen reqemin 9-a bolunub bolunmediyin deyir.
         ---------------------------------------------------------------
@@ -180,38 +182,19 @@ function isDiv6(number) {
 }
 
 function isDiv7(number) {
-  const numsOfNum = Array.from(String(number), Number);
+  if (number % 7 === 0) {
+    return `[+]: ${number} - 7-a bolunur.`;
+  }
+  let lastTwoDigits = number % 100;
+  let difference = Math.abs(
+    Math.floor(lastTwoDigits / 10) - (lastTwoDigits % 10)
+  );
 
-  if (numsOfNum.length < 4) {
-    return `[-]: gonderilen reqem: "${number}", 7-e bolunme qaydasini pozur, QAYDA: 7-ye bolmek uchun reqemin son 3 reqemi onceki reqemden veya reqemlerden chixmaq lazimdir, yeni minimum reqemin uzunlugu: 4 ola biler.`;
+  if (difference % 7 === 0) {
+    return true;
   }
 
-  let lastThreeDigits = numsOfNum.slice(-3).toString();
-  lastThreeDigits = parseInt(lastThreeDigits.replace(/,/g, ""));
-
-  let reamingPartOfNum = numsOfNum.slice(0, -3).toString();
-  reamingPartOfNum = parseInt(reamingPartOfNum.replace(/,/g, ""));
-
-  console.log("son uch hisse reqemi: ", lastThreeDigits);
-  console.log("yerde qalan: ", reamingPartOfNum);
-
-  if (reamingPartOfNum > lastThreeDigits) {
-    let result = reamingPartOfNum - lastThreeDigits;
-
-    if (result % 7 == 0) {
-      return `[+]: ${number} - 7-ye bolunur.`;
-    } else {
-      return `[!]: ${number} - 7-ye bolunmur.`;
-    }
-  } else {
-    let result = lastThreeDigits - reamingPartOfNum;
-
-    if (result % 7 == 0) {
-      return `[+]: ${number} - 7-ye bolunur.`;
-    } else {
-      return `[!]: ${number} - 7-ye bolunmur.`;
-    }
-  }
+  return `[!]: ${number} - 7-e bolunmur.`;
 }
 
 function isDiv8(number) {
