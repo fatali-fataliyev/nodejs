@@ -70,9 +70,9 @@ function getRules() {
   return `
         Ikiye Bolunme: Ededin ikiye bolunmesinden alinan qaliq sifira beraberdirse eded ikiye bolunur.
         ---------------------------------------------------------------
-        Uche Bolunme: 
+        Uche Bolunme: Ededlerin cemi uche bolunurse eded uche bolunur => 333 (3+3+3 = 9 / 9/3 = 3)
         ---------------------------------------------------------------
-        5. reqem 5 => verilen reqemin 5-e bolunub bolunmediyin deyir.
+        
         ---------------------------------------------------------------
         6. reqem 6 => verilen reqemin 6-a bolunub bolunmediyin deyir.
         ---------------------------------------------------------------
