@@ -72,23 +72,29 @@ function getHelp() {
 
 function getRules() {
   return `
-        Ikiye Bolunme: Ededin ikiye bolunmesinden alinan qaliq sifira beraberdirse eded ikiye bolunur.
-        ---------------------------------------------------------------
-        Uche Bolunme: Reqemlerin cemi uche bolunurse eded uche bolunur => 333 (3+3+3 = 9 | 9/3 = 3)
-        ---------------------------------------------------------------
-        Dorde Bolunme: Ededin son 2 reqemi dorde bolunurse bu ededde dorde bolunur. => (480 [80] | 80/4 = 20)
-        ---------------------------------------------------------------
-        Beshe Bolunme: Ededin son reqemi "0" veya "5"-dirse bu eded 5e bolunur.
-        ---------------------------------------------------------------
-        Altiya Bolunme: Eded hem ikiye hemde uche bolunurse bu eded altiya bolunur.
-        ---------------------------------------------------------------
-        Yeddiye Bolunme: Ededin sondan uch reqemi ile qalan hissesi ile chixiriq, alinan ferq yeddiye bolunurse bu eded yeddiye bolunur.
-        ---------------------------------------------------------------
-        Sekkize Bolunme: Ededin son uch reqemi sekkize bolunurse bu eded sekkize bolunur.
-        ---------------------------------------------------------------
-        Doqquza Bolunme: Reqemlerin cemi doqquza bolunurse bu ededde doqquza bolunur.
-        ---------------------------------------------------------------
-        Ona Bolunme: Ededin son reqemi sifirdirsa bu eded ona bolunur.
+      ——————————————————————————————————————————————————————————————————————————————————————————————
+      İKİYƏ BÖLÜNMƏ: Ədədin ikiə bölünməsindən alınan qalıq sıfıra bərabərdirsə, ədəd ikiyə bölünür.
+      ——————————————————————————————————————————————————————————————————————————————————————————————
+      ÜÇƏ BÖLÜNMƏ: Rəqəmlərin cəmi üçə bölünürsə, ədəd üçə bölünür. 
+          Məsələn: 333 (3 + 3 + 3 = 9 | 9 / 3 = 3)
+      ——————————————————————————————————————————————————————————————————————————————————————————————
+      DÖRDƏ BÖLÜNMƏ: Ədədin son iki rəqəmi dördə bölünürsə, bu ədəd də dördə bölünür. 
+          Məsələn: 480 (80 | 80 / 4 = 20)
+      ——————————————————————————————————————————————————————————————————————————————————————————————
+      BEŞƏ BÖLÜNMƏ: Ədədin son rəqəmi "0" və ya "5"-dirsə, bu ədəd beşə bölünür.
+      ——————————————————————————————————————————————————————————————————————————————————————————————
+      ALTIYA BÖLÜNMƏ: Ədəd həm ikiyə, həm də üçə bölünürsə, bu ədəd altıya bölünür.
+      ——————————————————————————————————————————————————————————————————————————————————————————————
+      YEDDİYƏ BÖLÜNMƏ: Ədədin sondan üç rəqəmi ilə qalan hissəsi çıxarılır, alınan fərq yeddiyə böl-
+      -ünürsə, bu ədəd yeddiyə bölünür.
+      ——————————————————————————————————————————————————————————————————————————————————————————————
+      SEKKİZƏ BÖLÜNMƏ: Ədədin son üç rəqəmi səkkizə bölünürsə, bu ədəd səkkizə bölünür.
+      ——————————————————————————————————————————————————————————————————————————————————————————————
+      DOQQUZA BÖLÜNMƏ: Rəqəmlərin cəmi doqquza bölünürsə, bu ədəd də doqquza bölünür.
+      ——————————————————————————————————————————————————————————————————————————————————————————————
+      ONA BÖLÜNMƏ: Ədədin son rəqəmi sıfırdırsa, bu ədəd ona bölünür.
+      ——————————————————————————————————————————————————————————————————————————————————————————————
+
     `;
 }
 
