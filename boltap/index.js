@@ -49,23 +49,23 @@ function getHelp() {
 |                               ƏSAS ƏMRLƏR                                |
 |——————————————————————————————————————————————————————————————————————————|
 |——————————————————————————————————————————————————————————————————————————|
-| 3. Rəqəm Cüt      => Verilən rəqəmin 2-yə bölünüb-bölünmədiyini göstərir.|
+| 3. ədəd 2      => Verilən ədədin 2-yə bölünüb-bölünmədiyini göstərir.    |
 |——————————————————————————————————————————————————————————————————————————|
-| 4. Rəqəm 3        => Verilən rəqəmin 3-ə bölünüb-bölünmədiyini göstərir. |
+| 4. ədəd 3        => Verilən ədədin 3-ə bölünüb-bölünmədiyini göstərir.   |
 |——————————————————————————————————————————————————————————————————————————|
-| 5. Rəqəm 4        => Verilən rəqəmin 4-ə bölünüb-bölünmədiyini göstərir. |
+| 5. ədəd 4        => Verilən ədədin 4-ə bölünüb-bölünmədiyini göstərir.   |
 |——————————————————————————————————————————————————————————————————————————|
-| 6. Rəqəm 5        => Verilən rəqəmin 5-ə bölünüb-bölünmədiyini göstərir. |
+| 6. ədəd 5        => Verilən ədədin 5-ə bölünüb-bölünmədiyini göstərir.   |
 |——————————————————————————————————————————————————————————————————————————|
-| 7. Rəqəm 6        => Verilən rəqəmin 6-ya bölünüb-bölünmədiyini göstərir.|
+| 7. ədəd 6        => Verilən ədədin 6-ya bölünüb-bölünmədiyini göstərir.  |
 |——————————————————————————————————————————————————————————————————————————|
-| 8. Rəqəm 7        => Verilən rəqəmin 7-yə bölünüb-bölünmədiyini göstərir.|
+| 8. ədəd 7        => Verilən ədədin 7-yə bölünüb-bölünmədiyini göstərir.  |
 |——————————————————————————————————————————————————————————————————————————|
-| 9. Rəqəm 8        => Verilən rəqəmin 8-ə bölünüb-bölünmədiyini göstərir. |
+| 9. ədəd 8        => Verilən ədədin 8-ə bölünüb-bölünmədiyini göstərir.   |
 |——————————————————————————————————————————————————————————————————————————|
-| 10. Rəqəm 9       => Verilən rəqəmin 9-a bölünüb-bölünmədiyini göstərir. |
+| 10. ədəd 9       => Verilən ədədin 9-a bölünüb-bölünmədiyini göstərir.   |
 |——————————————————————————————————————————————————————————————————————————|
-| 11. Rəqəm 10      => Verilən rəqəmin 10-a bölünüb-bölünmədiyini göstərir.|
+| 11. ədəd 10      => Verilən ədədin 10-a bölünüb-bölünmədiyini göstərir.  |
 +——————————————————————————————————————————————————————————————————————————+
     `;
 }
