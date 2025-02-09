@@ -211,8 +211,8 @@ function isDiv8(number) {
 
   let lastThreeDigits = numsOfNum.slice(-3).toString();
   lastThreeDigits = parseInt(lastThreeDigits.replace(/,/g, ""));
-
-  if (lastThreeDigits % 8 !== 0) {
+  console.log(lastThreeDigits);
+  if (lastThreeDigits % 8 === 0) {
     return `[+]: ${number} - 8-e bolunur.`;
   } else {
     return `[!]: ${number} - 8-e bolunmur.`;
@@ -224,7 +224,7 @@ function isDiv9(number) {
   let totalOfNums = 0;
   numsOfNum.map((el) => (totalOfNums += el));
 
-  if (totalOfNums % 9 == 0) {
+  if (totalOfNums % 9 === 0) {
     return `[+]: ${number} - 9-a bolunur.`;
   } else {
     return `[!]: ${number} - 9-a bolunmur.`;
