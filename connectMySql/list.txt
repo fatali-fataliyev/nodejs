@@ -1,0 +1,7 @@
+1. ubuntu
+2. apt update
+3. apt install -y node
+4. apt install -y npm
+5. copy program files
+6. npm install
+7. node index.js
